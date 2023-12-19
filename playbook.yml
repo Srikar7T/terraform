@@ -1,0 +1,28 @@
+- hosts: worker3
+  become: true
+
+  tasks:
+    - name: Install Mysql
+      dnf:
+        name: mysql-community-server
+        state: present
+
+    - name: start Mysql service
+      service:
+        name: mysqld
+        state: started
+        enabled: yes
+
+- hosts: worker4
+  become: true
+  tasks:
+    - name: Install Apache
+      dnf:
+       name: httpd
+       state: present
+
+    - name: start Apache service
+      service:
+        name: httpd
+        state: started
+        enabled: yes  
