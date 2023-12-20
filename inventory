@@ -1,2 +1,4 @@
-worker3 ansible_host=ec2-user@35.87.72.249
-worker4 ansible_host=ec2-user@35.87.151.252
+[mysql_instance]
+worker3 ansible_host = ec2-user@35.87.72.249
+[apache instance]
+worker4 ansible_host = ec2-user@35.87.151.252
