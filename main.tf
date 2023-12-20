@@ -4,17 +4,19 @@ provider "aws"{
 resource "aws_instance" "mysql_instance" {
   ami           = "ami-093467ec28ae4fe03"
   instance_type = "t2.micro"
+  key_name = "testpoc"
 
   tags = {
-    Name = "MySQL_Instance"
+    Name = "MySQL_Instance1"
   }
 }
 resource "aws_instance" "apache_instance" {
   ami           = "ami-093467ec28ae4fe03"
   instance_type = "t2.micro"
+  key_name "testpoc"
 
   tags = {
-    Name = "apache-instance"
+    Name = "apache-instance1"
   }
 }
 
