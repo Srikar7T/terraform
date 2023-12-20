@@ -1,4 +1,5 @@
 - hosts: worker3
+  remote_user: ec2-user
   become: true
 
   tasks:
@@ -14,6 +15,7 @@
         enabled: yes
 
 - hosts: worker4
+  remote_user: ec2-user
   become: true
   tasks:
     - name: Install Apache
