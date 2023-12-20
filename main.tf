@@ -16,7 +16,7 @@ resource "aws_instance" "apacheinstall_instance" {
   key_name "testpoc"
 
   tags = {
-    Name = "apache-instance1"
+    Name = "apache_instance1"
   }
 }
 
